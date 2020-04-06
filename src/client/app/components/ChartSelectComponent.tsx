@@ -47,16 +47,15 @@ export default class ChartSelectComponent extends React.Component<ChartSelectPro
 						outline={this.props.selectedChart !== ChartTypes.line}
 						onClick={() => this.handleChangeChartType(ChartTypes.line)}
 					>
-						<TooltipTextComponent tip="Compares various data">
+						<TooltipTextComponent tip='Compares various data'>
 						<FormattedMessage id='line' />
 						</TooltipTextComponent>
-						
 					</Button>
 					<Button
 						outline={this.props.selectedChart !== ChartTypes.bar}
 						onClick={() => this.handleChangeChartType(ChartTypes.bar)}
 					>	
-						<TooltipTextComponent tip="Compares various data">
+						<TooltipTextComponent tip='ompares various data'>
 						<FormattedMessage id='bar' />
 						</TooltipTextComponent>
 					</Button>
@@ -64,16 +63,15 @@ export default class ChartSelectComponent extends React.Component<ChartSelectPro
 						outline={this.props.selectedChart !== ChartTypes.compare}
 						onClick={() => this.handleChangeChartType(ChartTypes.compare)}
 					>
-						<TooltipTextComponent tip="Compares various data">
+						<TooltipTextComponent tip='Compares various data'>
 						<FormattedMessage id='compare' />
 						</TooltipTextComponent>
 					</Button>
 				</ButtonGroup>
-				<TooltipHelpComponent tip="These render the data in different ways"/>
+				<TooltipHelpComponent tip='hese render the data in different ways'/>
 			</div>
 		);
 	}
-
 	private handleChangeChartType(value: ChartTypes) {
 		this.props.changeChartType(value);
 	}

@@ -1,7 +1,6 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
 import * as React from 'react';
 import { Link } from 'react-router';
 import { Button } from 'reactstrap';
@@ -12,11 +11,9 @@ import getPage from '../utils/getPage';
 import TooltipHelpComponent from './TooltipHelpComponent';
 import topLevel from 'reducers/notifications';
 import TooltipTextComponent from './TooltipTextComponent';
-
 interface HeaderButtonsProps {
 	showCollapsedMenuButton: boolean;
 }
-
 /**
  * React component that controls the buttons in the Header
  */
@@ -25,7 +22,6 @@ export default class HeaderButtonsComponent extends React.Component<HeaderButton
 		super(props);
 		this.handleLogOut = this.handleLogOut.bind(this);
 	}
-
 	public render() {
 		const showOptions = false;
 		const renderLoginButton = !hasToken();
@@ -34,7 +30,6 @@ export default class HeaderButtonsComponent extends React.Component<HeaderButton
 		const renderGroupsButton = getPage() !== 'groups';
 		const renderMetersButton = getPage() !== 'meters';
 		const renderLogoutButton = hasToken();
-
 		const loginLinkStyle: React.CSSProperties = {
 			display: renderLoginButton ? 'inline' : 'none',
 			paddingLeft: '5px'
@@ -58,7 +53,6 @@ export default class HeaderButtonsComponent extends React.Component<HeaderButton
 			display: renderLogoutButton ? 'inline' : 'none',
 			paddingLeft: '5px'
 		};
-
 		return (
 			<div>
 				<div className='d-lg-none'>
@@ -70,7 +64,7 @@ export default class HeaderButtonsComponent extends React.Component<HeaderButton
 					}
 				</div>
 				<div className={this.props.showCollapsedMenuButton ? 'd-none d-lg-block' : ''}>
-					<TooltipHelpComponent tip="Navigate to different pages" />
+					<TooltipHelpComponent tip='Navigate to different pages' />
 					<Link style={adminLinkStyle} to='/admin'><Button outline><FormattedMessage id='admin.panel'/></Button></Link>
 					<Link style={groupsLinkStyle} to='/groups'><Button outline><TooltipTextComponent tip="Groups"><FormattedMessage id='groups' /></TooltipTextComponent></Button></Link>
 					<Link style={metersLinkStyle} to='/meters'><Button outline><TooltipTextComponent tip="Meters"><FormattedMessage id='meters' /></TooltipTextComponent></Button></Link>
@@ -81,7 +75,6 @@ export default class HeaderButtonsComponent extends React.Component<HeaderButton
 			</div>
 		);
 	}
-
 	private handleLogOut() {
 		localStorage.removeItem('token');
 		this.forceUpdate();

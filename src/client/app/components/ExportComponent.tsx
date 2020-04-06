@@ -22,7 +22,6 @@ export default function ExportComponent(props: ExportProps) {
 	 */
 	const exportReading = () => {
 		const compressedData = props.exportVals.datasets;
-
 		// Determine and format the first time in the dataset
 		let startTime = moment(compressedData[0].exportVals[0].x);
 		for (const reading of compressedData) {
@@ -34,7 +33,6 @@ export default function ExportComponent(props: ExportProps) {
 			}
 		}
 		const startTimeString = startTime.format('YYYY-MMM-DD-dddd');
-
 		// Determine and format the last time in the dataset
 		let endTime = moment(compressedData[0].exportVals[compressedData[0].exportVals.length - 1].x);
 		for (const reading of compressedData) {
@@ -46,7 +44,6 @@ export default function ExportComponent(props: ExportProps) {
 			}
 		}
 		const endTimeString = endTime.format('YYYY-MMM-DD-dddd');
-
 		const chartName = compressedData[0].currentChart;
 		const name = `oedExport_${chartName}_${startTimeString}_to_${endTimeString}.csv`;
 		graphExport(compressedData,	name);
@@ -54,7 +51,7 @@ export default function ExportComponent(props: ExportProps) {
 	return (
 		<div>
 			<Button outline onClick={exportReading}>
-				<TooltipTextComponent tip="Exports the data">
+				<TooltipTextComponent tip='Exports the data'>
 				<FormattedMessage id='export.graph.data' />
 				</TooltipTextComponent>
 			</Button>

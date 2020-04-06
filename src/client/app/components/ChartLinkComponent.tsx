@@ -37,7 +37,7 @@ export default class ChartLinkComponent extends React.Component<ChartLinkProps, 
 		return (
 			<div>
 				<Button	outline	onClick={this.toggleLink}>
-					<TooltipTextComponent tip="Chart Link">
+					<TooltipTextComponent tip='Chart Link'>
 					<FormattedMessage id='toggle.link' />
 					</TooltipTextComponent>
 				</Button>

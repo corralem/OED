@@ -218,9 +218,8 @@ class UIOptionsComponent extends React.Component<UIOptionsPropsWithIntl, UIOptio
 						onClick={this.handleSetOptionsVisibility}
 						outline
 					>
-						<TooltipTextComponent tip="Make optionns disapear">
+						<TooltipTextComponent tip='Make optionns disapear'>
 						{ this.props.optionsVisibility ?
-							
 							<FormattedMessage id='hide.options' />
 							:
 							<FormattedMessage id='show.options' />

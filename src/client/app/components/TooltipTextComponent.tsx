@@ -31,6 +31,6 @@ export default function TooltipTextComponent(props: TooltipTextProps) {
 				<div data-tip={props.tip}>{props.children}</div>
 				<ReactTooltip />
 			</div>
-		)
+		);
 	}
 }

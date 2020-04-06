@@ -1,11 +1,9 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
 import TooltipHelpComponent from './TooltipHelpComponent';
-
 /**
  * React component that controls the footer strip at the bottom of all pages
  */
@@ -40,9 +38,8 @@ export default function FooterComponent() {
 					</a>
 					<FormattedMessage id='info' />
 				</span>
-				<TooltipHelpComponent tip="Follow links if you have more questions"/>
+				<TooltipHelpComponent tip='Follow links if you have more questions'/>
 			</footer>
-			
 		</div>
 	);
 }

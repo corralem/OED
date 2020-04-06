@@ -31,8 +31,7 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 
 	public render() {
 		const divBottomPadding: React.CSSProperties = {
-			paddingBottom: '15px'
-			
+			paddingBottom: '15px'	
 		};
 		const labelStyle: React.CSSProperties = {
 			fontWeight: 'bold',
@@ -49,21 +48,18 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 		return (
 			<div>
 				<p style={labelStyle}>
-				
 					<FormattedMessage id='groups' />:
 				</p>
 				<div style={divBottomPadding}>
-			
 					<MultiSelectComponent
 						options={this.props.groups}
 						selectedOptions={this.props.selectedGroups}
 						placeholder={formatMessage(messages.selectGroups)}
 						onValuesChange={handleGroupSelect}
 					/>
-					<TooltipHelpComponent tip="Choose which groups to dipsplay"/>
+					<TooltipHelpComponent tip='Choose which groups to dipsplay'/>
 				</div>
 				<p style={labelStyle}>
-					
 					<FormattedMessage id='meters' />:
 				</p>
 				<div style={divBottomPadding}>
@@ -73,12 +69,11 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 						placeholder={formatMessage(messages.selectMeters)}
 						onValuesChange={this.handleMeterSelect}
 					/>
-					<TooltipHelpComponent tip="Choose which meters to display"/>
+					<TooltipHelpComponent tip='Choose which meters to display'/>
 				</div>
 			</div>
 		);
 	}
-
 	/**
 	 * Handles a change in meter selection
 	 * @param {Object[]} selection An array of items representing the current selection
@@ -86,7 +81,6 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 	private handleMeterSelect(selection: SelectOption[]) {
 		this.props.selectMeters(selection.map(s => s.value));
 	}
-
 	/**
 	 * Handles a change in group selection
 	 * @param {Object[]} selection An array of items representing the current selection
@@ -94,7 +88,6 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 	private handleGroupSelect(selection: SelectOption[]) {
 		this.props.selectGroups(selection.map(s => s.value));
 	}
-	
 }
 
 export default injectIntl<ChartDataSelectProps>(ChartDataSelectComponent);
