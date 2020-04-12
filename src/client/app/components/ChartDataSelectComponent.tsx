@@ -70,7 +70,9 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 						onValuesChange={this.handleMeterSelect}
 					/>
 					<TooltipHelpComponent tip='Choose which meters to display'/>
+					<TooltipHelpComponent tip = 'this is a test 1'/>
 				</div>
+				<TooltipHelpComponent tip = 'this is test 2'/>
 			</div>
 		);
 	}

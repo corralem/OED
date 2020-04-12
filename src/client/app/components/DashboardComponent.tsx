@@ -10,6 +10,7 @@ import BarChartContainer from '../containers/BarChartContainer';
 import MultiCompareChartContainer from '../containers/MultiCompareChartContainer';
 import SpinnerComponent from './SpinnerComponent';
 import { ChartTypes } from '../types/redux/graph';
+import TooltipHelpComponent from './TooltipHelpComponent';
 
 defaults.plugins = {
 	datalabels: {
@@ -63,7 +64,9 @@ export default function DashboardComponent(props: DashboardProps) {
 					) : (
 						<ChartToRender />
 					)}
+					<TooltipHelpComponent tip = 'test number 5'/>
 				</div>
+				<TooltipHelpComponent tip = 'test number 4'/>
 			</div>
 		</div>
 	);
