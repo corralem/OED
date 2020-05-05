@@ -57,7 +57,13 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 						placeholder={formatMessage(messages.selectGroups)}
 						onValuesChange={handleGroupSelect}
 					/>
-					<TooltipHelpComponent tip='Choose which groups to dipsplay'/>
+					<TooltipHelpComponent multiline={true} tip='Groups aggregate (sum the usage) of any combination of groups and meters. <br> You can choose
+which groups to include in your graphic from the “Groups” dropdown menu. Note you can type
+in text to limit which groups are shown. <br> The Groups button in the top, right side of the window
+allow you to see more details about each group and, if you are an admin, to edit the groups.
+<br>
+Please visit https://openenergydashboard.github.io/help/metersAndGroups for further details
+and information.'/>
 				</div>
 				<p style={labelStyle}>
 					<FormattedMessage id='meters' />:
@@ -69,10 +75,14 @@ class ChartDataSelectComponent extends React.Component<ChartDataSelectPropsWithI
 						placeholder={formatMessage(messages.selectMeters)}
 						onValuesChange={this.handleMeterSelect}
 					/>
-					<TooltipHelpComponent tip='Choose which meters to display'/>
-					<TooltipHelpComponent tip = 'this is a test 1'/>
+					<TooltipHelpComponent multiline={true} tip='Meters are the basic unit of usage and generally represent the readings from a single usage
+meter. <br> You can choose which meters to include in your graphic to view from the “Meters:”
+dropdown menu. <br>  Note you can type in text to limit which meters are shown. <br> The Meters button
+in the top, right side of the window allow you to see more details about each meter and, if you
+are an admin, to edit the meters. <br> Please visit
+https://openenergydashboard.github.io/help/metersAndGroups for further details and
+information.'/>
 				</div>
-				<TooltipHelpComponent tip = 'this is test 2'/>
 			</div>
 		);
 	}

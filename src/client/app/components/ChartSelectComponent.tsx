@@ -68,7 +68,13 @@ export default class ChartSelectComponent extends React.Component<ChartSelectPro
 						</TooltipTextComponent>
 					</Button>
 				</ButtonGroup>
-				<TooltipHelpComponent tip='These render the data in different ways'/>
+				<TooltipHelpComponent multiline={true} tip='Any graph type can be used with any combination of groups and meters. <br> Line graphs show the
+usage (e.g., kW) vs. time. <br> You can zoom and scroll with the controls right below the graph. Bar
+shows the total usage (e.g., kWh) for the timeframe of each bar where you can control the
+timeframe. <br> Compare allows you to see the current usage vs. the usage in the last previous period
+for a day, week and four weeks. <br> Clicking on one of the choices (Line, Bar, Compare) renders
+that graphic. <br> Please visit https://openenergydashboard.github.io/help/graphs for further details
+and information.'/>
 			</div>
 		);
 	}

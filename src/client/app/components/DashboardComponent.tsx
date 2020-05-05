@@ -101,7 +101,6 @@ export default class DashboardComponent extends React.Component<DashboardProps, 
 						)}
 					</div>
 				</div>
-				<TooltipHelpComponent tip = 'test number 4'/>
 			</div>
 		);
 	}
